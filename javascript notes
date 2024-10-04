@@ -1,0 +1,124 @@
+//introduction to javascript   5 Hours 37 Minutes 57 Seconds
+ REPl -> Read Evaluate Print Loop   #browser is work as repl but the js file is not work as the repl
+
+# NAN stands for not a number.  type of NAN is number
+# undefined is keyword and the type of the undefined is undefined.  same this applicable to null.
+#the type of null is object.
+//data types in javascript
+* primitive(value type)   -> classify into 7 categories
+ 1. number   -> number is bydefault in number. we can convert number to string.
+ 2. string   -> tes we can convert.
+ 3. boolean   -> can convert into the number. true(1) and for the false(0).
+ 4. undifined   -> can't convert to number.
+ 5. null   -> we can convert into the number and the value is 0.
+ 6. bigint
+ 7. symbol  -> used to represent the unique values that can be used as identifier or keys in object. used to create private properties and methods in classes. useful for creating constants and used in your    code.
+* non-primitive(reference type)
+ 1. object
+#how we can convert string to number
+ 1) by using the + operator. place before the string.
+ 2) by using the parseInt method which will pic up the digit from the starting only.
+  in both condition if number is valid then it will show the number directly else then it will show the NAN. NAN also type of number.
+#how we can convert number to string
+ 1) just add the empty string after or before  the number using + operator.
+
+
+// variables in javascript
+# variables is a container used to store the value.
+# we can give name ti the variable by 3 ways.
+ 1) let keyword
+ 2) var keyword
+ 3) const keyword
+#variable declaration convention
+ A-Z capital letters, a-z small letters, 0-9 digits, $ and _ special symbol.
+# programming naming convention
+ 1) camel case  -> firstName
+ 2) snake case  -> first_name
+ 3) cabab case  -> first-name
+ 4) pascal case  -> FirstName
+ 
+// How the code run line by line in javascript
+ 1) Memory creation phase
+ 2) Code Execution phase
+ #temporal dead zone -> until assigning the value to the 'const' and 'let' keyword this variables store in the this zone.
+ 
+ // Dialog Boxes in Javascript
+ there are 3 types of dialog boxes
+ 1) alert    -> it will return the undefined if we run on the bowser  
+ 2) confirm   -> it will return the 'true' if we click on the 'ok' tab. if we click on the 'cancel' tab then it will return 'false'
+ 3) prompt   -> it will return the text we will written in the textbox. if we didn't type anything then it will return the null.
+ 
+// Template Literals | string methods and properties
+# when we use the property we don't put the bracket at the end.  for ex. length property
+# when we use the method we put the bracket at the end. for Ex. toUpperCase() 
+string methods - 
+toUpperCase(), toLowerCase(), trim(), trimStart(), trimEnd(), includes(), charAt(),  indexOf(), replace(), replaceAll(), concat(), padStart(), padEnd(), charCodeAt(), split()
+# string template literal
+
+//Math object in Javascript
+1) Mathematical operators
+  - addition, subtraction, multiplication, division, reminder, exponentiation
+2) javascript Math object
+3) Math.sqrt() Method
+4) Math.pow() Method
+5) Math.floor() Method, Math.ceil() Method, Math.round() Method, Math.random() Method, Math.random() and Math.floor() Together
+# Understand Infinity and NaN in JavaScript
+
+//Truthy and Falsy Values in javascript
+
+//Comparison Operators in JavaScript
+ -- equality, not equal, greater than, less than, greater than equal to, less than equal to || == , ===, !==, !=, >, <, >=, <= 
+ 
+// Logical operators in javascript
+ --and , or , not ||  && , ||, !
+ 1) and operator -> when both the value are true then only it will give the result true. if any one value is false then entire result is false. 
+    suppose if the expression finds false value inittially then it will not go forward from there only it written the false.
+    ex. (4> 5) && (5>2)   result is false.
+         0 && 'hello'   result is 0.
+    we can use the and operator with truthy and falsy values also. if the initial expression gives false value then it will give result false. and suppose
+    the initial value result is true then it will give the result of next expression.
+    ex. 'hello' &&  2+3  result is 5.
+ 2) or operator -> if any result is true then it will give the result true. it will check initial expression if it is the true then it will not go forward 
+    from there only it written the true.
+    ex.- (4< 5) || (5>8)   result is true.
+         'hello' ||  0  result is 'hello'
+    we can use the or operator with truthy and falsy values also. if the initial expression gives true value then it will give result true. and suppose
+    the initial value result is flase then it will give the result of next expression.
+    ex. 'null' &&  2+3  result is 5.
+ 3) not operator -> if the expression result is false then it will give the overall result false. and vice versa.
+
+// Bitwise operator in javascript
+ -- and, or, not || &, |, !
+
+// Decision Making in JavaScript 
+1) IF Statement
+2) IF-ELSE Statement
+3) ELSE-IF Statement
+4)  nested IF-ELSE Statement
+5) switch Statement
+
+// ternary operator
+
+// how to see variable address in dev tools
+#when we create the variable that store it into the somewhere with memory address and value of that variable is stored somewhere. with the value memory address we can refer to the
+ variable name.
+ ex. suraj @442979 - suraj value is stored at address @442979
+     name  @442979 with new memry address of its own   - name which is variable name store the value @442979 and place at new memory address.
+
+// Objects in JavaScript
+there is only one type of non-primitive data type that is called object.
+objects are further divided into 3 categories.
+ - Object Literals
+ - Arrays
+ - functions
+# Object.freeze( ) vs Object.seal( ) in JavaScript 
+- when you want no one can modify your object ( no delete, no add) then we use the object.seal method but you can modify the properties inside the object
+- when you want no one can (modify, delete, add) properties in object then you must use the object.freeze method.
+
+// Arrays in Javascript
+ - push, pop, shift, unshift, concat , indexOf, includes, reverse, sort, slice , splice
+ # Multidimensional Arrays  
+   - Multidimensional arrays are also called as array inside the array element
+ # Right Way to Copy Objects and Arrays 
+   - Deep copy   -> this is the new way . we use the JSON.parse(JSON.stringify(arrayName));
+   - Shallow Copy  -> old way. we use Object.assign  or spread operator
