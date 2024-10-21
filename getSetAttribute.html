@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get and set attribute in javascript</title>
+    <!-- <script src="getSetAttribute.js"></script> -->
+    <!-- <script src="applyStyles.js"></script> -->
+    <!-- <script src="parentSiblingAndAccessElement.js"></script> -->
+    <style>
+       /* setting the attribute value */
+       [hello] {
+        color: rgb(197, 166, 166);
+       }
+       [kya] {
+         color: orangered;
+       }
+       [kya = 'age']{
+        color: blue;
+       }
+       #heading{
+        background-color: grey;
+       }
+    </style>
+</head>
+<body>
+    <div class="intro" id="heading">
+        <p id="heading">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut consequatur ipsa asperiores dolor labore. Esse laudantium quisquam maiores obcaecati nulla?</p>
+        <div class="profile basic_intro" >
+            <strong kya="name" name="suraj" style="color: hotpink; background-color: bisque;">Suraj Jadhav</strong>
+            <br>
+            <p kya="age">Age: 22</p>
+            <br>
+            <i hello="world">Web Developer</i>
+        </div>
+        <img src="https://itproger.com/img/courses/1532598979.svg" alt="" height="100px" width="100px">
+    </div>
+</body>
+</html>

@@ -122,3 +122,182 @@ objects are further divided into 3 categories.
  # Right Way to Copy Objects and Arrays 
    - Deep copy   -> this is the new way . we use the JSON.parse(JSON.stringify(arrayName));
    - Shallow Copy  -> old way. we use Object.assign  or spread operator
+
+// combined assignment operator
+  -+= , -=, *= , /= , %= ,  **= , ++ , --
+  preincrement => ++i;
+  postincrement => i++;
+  predecrement => --i;
+  postdecrement => i--;
+
+//loops in javascript
+for , while , do-while , for-of , for-in
+//break and continue in javascript  
+  - use to jump out of" a code block.
+  -continue => skip one loop iteration.
+  -break => jump out of a loop or a switch or a block.
+
+// functions in javascript
+- function declaration
+- function call
+- arrow function in javascript
+- return keyword in javascript
+  The return statement stops the execution of a function and returns a value.
+
+// execution context in javascript
+- code is executed in two phase
+  1. memory allocation phase
+  2. code execution phase
+  - execution context is created when we call a function
+  - execution context is destroyed when we exit a function
+  - execution context is created for global scope also
+  suppose in the function we calling some other function then at the time of memorhy creation the new execution context is created then again inside it momory creation and code execution.
+
+//call stack in javascript
+by default anonyms function is there in the stack.
+stack data structure which track the functions which are going the execute. if the fuction calls itself multiple times thene our stack gets overflow.
+- call stack is used to track the execution of the function.
+
+// Hoisting in javascript
+- Temporal Dead Zone in javascript => area of code where the variable are store and computer can not access the those variables until the memorhy intializes it.
+- temporal dead zone is created for the const and let keyword. for the var it gives the value undefined 
+Hoinsting is javascript default behaviour of moving declaration to the top.
+variable can be used before declared.
+function expression
+  const sayHii = function(){
+    console.log("hii");
+  }
+function declaration
+  function sayHii(){
+    console.log("hii");
+  }
+sayHii();   //function call
+we can do the function defination
+  1. function declaration
+  2. function expression
+
+// global and local scope
+Global Scope -> 
+  script scope  -> create for the const and let keyword.
+  window object.
+     if we access the script scope variable using the window object it gives us the undefined.
+     window object create for the var and functions.
+     Local Scope -> variables scope valid only for that block. can not access outside the block
+                    only for the functions.
+  Let and Const variable having block scoped variable while var having global scope variable.
+Block scope -> const and let are the block scoped variable. if we use variable var then we can use outside the block and inside the function only.
+  we can only declare variable like num2 =23; and this variable goes into the window object.
+  to avoid this we write top of the code "use strict"
+closure => suppose we declare the function parent and inside the function there is function child.
+  so inside the child function we are accessing the parent function variables then those variables are called as closures.
+  closure is the function which has access to the outer function variables even after the outer function is destroyed
+Module Scope => 
+
+// Higher order functions
+  argument => pass while calling the function
+  parameters => pass at the time of the function declaration 
+  return type => return type of the function
+  #callback function => when a function is passed as argument to the another function is called as callback function.
+  #higher order function => function which takes another function as argument or return the function as output.
+
+// setTimeOut and setInterval
+setTimeout() => function which is going to execute after the specified time.
+setInterval() => function which is going to execute after the specified time and it will keep on executing
+clearTimeout() => function which is going to stop the execution of the function.
+clearInterval() => function which is going to stop the execution of the function.
+
+// Event Loop and Callback Queue
+  Event Loop => event loop is the intermediate between call stack and callback queue.
+  callback queue => callback queue is the queue where all the callback function are stored.
+  call stack => call stack is the stack where all the function are stored.
+  Asynchronous code => allows the program to executed immediately where the synchronous code will block the further execution of the remaining code until it finishes the current one.
+
+// difference between methods and functions
+  methods => methods are the functions which are attached to the object.
+  functions => functions are the standalone functions which are not attached to any object.
+
+// arrow function
+   addded in es6 feature
+
+//for - of and for - in loop
+  for-of => used over the iterable object like array, string , map , set
+  for-in => used over the non iterable object like where we store key - value pair 
+
+//for-each array method in javascript
+  we can use the foreach loop over the array.
+  we can use the foreach loop over the object but for this we need to create into the array.
+  for-each method does't return anything. it will retrun the undefined.
+
+//Map, filter ,reduce method in javascript
+  map() => used to create the new array from the existing array.
+  filter() => used to filter the array and return the new array.
+  reduce() => used to reduce the array into the single value.
+  find() => used to find the first element in the array which satisfy the given condition.
+  findIndex() => used to find the index of the first element in the array which satisfy the
+  some() => used to check whether the array contains at least one element which satisfy the given condition
+  every() => used to check whether the array contains all the elements which satisfy the given condition
+  sort() => used to sort the array in ascending or descending order
+  reverse() => used to reverse the array
+  concat() => used to merge the two or more array into the single array
+  join() => used to join the array into the string
+
+// Arguments keyword in javascript
+  arguments keyword is used to access the arguments of the function.
+  
+//ES6 featueres
+1. Default parameters
+   we used the default parameters to assign the value to the parameters.
+   for ex. function add(a , b=6)    so here we assign the parameter b to default value 6.
+2. spread operator
+   (...) allows us to quickly copy all or part of an existing array or object into another array or object.
+   it basically split the array elements
+   we will use spread operator at the time of the function call.
+3. rest operator or rest parameters
+   rest operator is used to pass the multiple argument to the function.
+   it is collect all the parameters and converted it into the array.
+   rest parameter must be last formal parameters.
+   used at the time of function definition
+4. destructuring in javascript 
+   majorly it is used with array and the object.
+
+//BOM => Browser Object Model
+  window object represents an open window in a browser. browser creates one window object for the HTML document. this object provides us the some methods and the properties.
+  BOM is an object created by the browser.
+  window.location => points to the url
+//DOM => Document Object Model
+  There is difference between innertext and innerHTMl.
+  In Browser there is component called htmlParser which converts the html into object format called document.
+  it represent only viewport. window object is represent to the whole browser.
+  we have access of the DOM and we can perform different actions on it that's we called as DOM manipulation.
+  DOM is an object created by the browser.
+  DOM is a tree like structure.
+  DOM is a collection of all the HTML elements.
+
+//DOM manipulation
+
+//innerText and textContent in JavaScript
+  innerHTMl => in innerHTML we can write the HTML tag by selecting the specific tag, class, id name.
+  innerText => in innerText we can only see the text content. if we select the innseText by id, class and replace the text but we can not add the tags here.
+  textContent => textContent is like it will give all the text including the space , new line and also hidden text.
+
+//getAttribute and setAttribute in JavaScript 
+  attributes provide additional information about HTML elements.
+  Attributes usually come in name/value pairs like: name="value"
+  
+//How to apply styles in JavaScript 
+  
+//Access Parent Sibling & Children Elements using JavaScript
+  
+//What is the Difference Between Element and Node?
+  Node - IN javascript there is different type of the object we called as Node.
+  // har ek element node hota hai lekin har ek node element nahi hota hai.
+
+//What is the difference between append and appendChild? 
+  append => it means that add at the end of the document.
+  container.appendChild(h1);
+  the differnce is appendChild will return the node is append. ex. conatiner.appendChild(h1) here h1 element will return 
+  but in append we can't get any return value. it will return undefined.
+  appendChild is used to add the child element in the parent element.
+  append is used to add the child element at the end of the parent element.
+  by using append we can append multiple things like conatiner.append('hello' , h1 , 'world') but we can't do this using appendChild.
+  appendChild is used to add the single child element in the parent element.

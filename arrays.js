@@ -69,3 +69,46 @@ const TicTacToe = [
     ['O' , null , 'X']
 ]
 console.log(TicTacToe);
+
+// if i want to duplicate the array and make some modifications in the new array
+const marksList = [23, 67, 78, 88, 92];
+const marksListNew = marksList;
+marksListNew.push(90);   // this is not the write way to copy the array elements.
+// old way
+marksListNew = {};
+Object.assign(marksList , marksListNew)
+// new way
+const marksListCopy = [...marksList];  //it will create the new array with the help of the spread operator
+// one more way using the concat
+const marksListCopy2 = [].concat(marksList);  //it will create the new array with the
+
+// if i want to duplicate the object
+const teacher = {
+    name: 'suraj',
+    age: 23,
+}
+const principal = teacher ; 
+principal.name = "mahesh"; // this is also not write way to copy the object
+// old way to copy the object 
+principal = {};
+Object.assign(student , principal);
+principal.name = "mahesh";
+// new wat to copy the object
+const principalCopy = { ...teacher };  // it will create the new object with the help of the spread operaator
+
+
+// deep copy
+const customer = {
+    name: 'suraj',
+    age: 20,
+    address: {
+        street: 'street1',
+        city: 'city1'
+    },
+    products : ["choclet" , "Ice-cream" , 'water']
+}
+
+const customer2 = {...customer};
+
+// the write way to copy the array elements 
+customer2 = JSON.parse(JSON.stringify(customer)) ;   //this is callesd as deep copy
